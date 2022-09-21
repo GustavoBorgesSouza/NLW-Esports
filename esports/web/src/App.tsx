@@ -11,6 +11,10 @@ import { Input } from './components/Form/input';
 import CreateAdModal from './components/CreateAdModal';
 import axios from 'axios';
 
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
+
+
 interface Game {
   id: string;
   title: string;
@@ -23,6 +27,14 @@ interface Game {
 export default function App() {
   //o <> é do typescript e permite fazer declarações, ex: o array que seria generico será de Game, seguindo a interface
   const [games, setGames] = useState<Game[]>([]);
+
+  const [ref] = useKeenSlider<HTMLDivElement>({
+    slides: {
+      perView: 6.5,
+      spacing: 20,
+    },
+    renderMode: 'precision'
+  })
 
   //Busca pelos games da API do Node.js
   function searchGames() {
@@ -40,16 +52,16 @@ export default function App() {
 
 
   return (
-    <div className='max-w-[1200px], mx-auto flex flex-col items-center my-16'>
+    <div className='max-w-[1200px] mx-auto flex flex-col items-center my-8'>
 
-      <img src={logoIMG} alt="logo do evento nlw esports" />
-      <h1 className='text-6xl text-white font-black my-2'>
+      <img className='w-52 h-auto' src={logoIMG} alt="logo do evento nlw esports" />
+      <h1 className='text-4xl text-white font-black my-3'>
         Seu
         <span className='text-transparent bg-nlw-gradient bg-clip-text'> duo </span>
         está aqui
       </h1>
 
-      <div className='grid grid-cols-6 gap-6 mt-10'>
+      <div ref={ref} className='keen-slider mx-10 mt-6'>
         {games.map(game => {
           return (
             <GameBanner key={game.id} bannerUrl={game.bannerUrl} title={game.title} adsCount={game._count.ads} />
