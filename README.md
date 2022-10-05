@@ -17,7 +17,7 @@ Esse projeto foi desenvolvido durante a edição esports da next level week. Nel
 >
 <br>
 
-### Navegue pelo código a vontade e veja as previews a seguir:
+### Navegue pelo código a vontade e veja as aplicações nos vídeos a seguir:
 <br>
 
 <div align"center">
@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido durante a edição esports da next level week. Nel
 
 ## Contate-me em:
 
-No momento estou em busca de oportunidades, críticas construtivas e sugestões para constante evolução 
+No momento estou em busca de oportunidades, críticas construtivas e sugestões para constante evolução  ;)
 
 
 [![Linkedin](https://img.shields.io/badge/Linkedin-2867b2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gustavo-borges-231356213)
