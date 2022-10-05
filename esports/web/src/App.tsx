@@ -11,6 +11,7 @@ import { Input } from './components/Form/input';
 import CreateAdModal from './components/CreateAdModal';
 import axios from 'axios';
 
+//importacoes do keen slider
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 
@@ -48,7 +49,7 @@ export default function App() {
   //useEffect recebe funções e parâmetros
   useEffect(() => {
     searchGames()
-  }, [])
+  },[])
 
 
   return (
